@@ -9,6 +9,7 @@ import { LoginComponent } from './components/login/login.component';
 import { DashboardteacherComponent } from './components/dashboardteacher/dashboardteacher.component';
 import { UserComponent } from './components/user/user.component';
 import { AddcourseComponent } from './components/addcourse/addcourse.component';
+import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AddcourseComponent } from './components/addcourse/addcourse.component';
     LoginComponent,
     DashboardteacherComponent,
     UserComponent,
-    AddcourseComponent
+    AddcourseComponent,
+    AdminDashboardComponent
   ],
   imports: [
     BrowserModule,
