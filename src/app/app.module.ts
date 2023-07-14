@@ -12,7 +12,11 @@ import { AddcourseComponent } from './components/addcourse/addcourse.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { YouTubePlayerModule } from '@angular/youtube-player';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,9 +32,15 @@ import { FooterComponent } from './components/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    CarouselModule,
+    YouTubePlayerModule,
+    MDBBootstrapModule.forRoot()
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, RegistrationComponent]
 })
 export class AppModule { }
