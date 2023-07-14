@@ -7,12 +7,14 @@ import { DashboardteacherComponent } from './components/dashboardteacher/dashboa
 import { UserComponent } from './components/user/user.component';
 import { AddcourseComponent } from './components/addcourse/addcourse.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { RegistrationsuccessComponent } from './components/registrationsuccess/registrationsuccess.component';
 
 
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'registration',component:RegistrationComponent},
+  {path:'registrationsuccess',component:RegistrationsuccessComponent},
   {path:'login',component:LoginComponent},
   {path:'profesordashboard',component:DashboardteacherComponent},
   {path:'usuariodashboard',component:UserComponent},

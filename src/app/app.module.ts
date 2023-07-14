@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { RegistrationsuccessComponent } from './components/registrationsuccess/registrationsuccess.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     AddcourseComponent,
     AdminDashboardComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    RegistrationsuccessComponent
   ],
   imports: [
     BrowserModule,
