@@ -1,42 +1,4 @@
-<div class="sidebar-container">
-  <ul class="sidebar-navigation">
-
-    <div class="card" style="width:235px; background-color: #cc4f4f;">
-      <div id="userimg" style="width:150px;">
-        <img [src]="'assets/img/admin.png'" alt="Card image" style="width:100%">
-      </div>
-      <div style="margin-left: auto; margin-right: auto;" class="card-body">
-        <h4 style="font-weight: bolder;" class="card-title"><b>{{name}}</b></h4>
-      </div>
-    </div>
-
-    <li>
-      <i class="fa fa-plus" aria-hidden="true"></i> <label [routerLink]="['/addProfessor']"
-        style="cursor: pointer;">Agregar Profesor</label>
-    </li>
-    <li>
-      <i class="fa fa-cart-plus" aria-hidden="true"></i> <label [routerLink]="['/addCourse']"
-        style="cursor: pointer;">Agregar Curso</label>
-    </li>
-    <li>
-      <i class="fa fa-book" aria-hidden="true"></i> <label [routerLink]="['/addchapter']"
-        style="cursor: pointer;">Añadir Capitulos</label>
-    </li>
-    <li>
-      <i class="fa fa-list" aria-hidden="true"></i> <label [routerLink]="['/courselist']"
-        style="cursor: pointer;">Listado de Cursos</label>
-    </li>
-    <li>
-      <i class="fa fa-user-o" aria-hidden="true"></i> <label [routerLink]="['/professorlist']"
-        style="cursor: pointer;">Profesores</label>
-    </li>
-    <li>
-      <i class="fa fa-user" aria-hidden="true"></i> <label [routerLink]="['/userlist']"
-        style="cursor: pointer;">Usuarios</label>
-    </li>
-  </ul>
-</div>
-
+<app-header></app-header>
 <div class="sidebar-container">
   <ul class="sidebar-navigation">
 
