@@ -117,46 +117,118 @@
                     <small class="text-danger"><b>{{msg}}</b></small>
                     <form #professorform="ngForm" (ngSubmit)="registerProfessor()">
                         <div class="row register-form">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="nombre de la institucion *" name="institutionname" [(ngModel)]="professor.institutionname" required 
-                                #institutionname="ngModel"
-                                [class.is-invalid]="institutionname.invalid && institutionname.touched">
-                                <small class="text-danger" [class.d-none]="institutionname.valid || institutionname.untouched"><b>Espacio requerido</b></small>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="nombre Profesor *"
+                                        name="professorname" [(ngModel)]="professor.professorname" required
+                                        #professorname="ngModel"
+                                        [class.is-invalid]="professorname.invalid && professorname.touched">
+                                    <small class="text-danger"
+                                        [class.d-none]="professorname.valid || professorname.untouched"><b>Espacio
+                                            requerido</b></small>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="correo electronico *"
+                                        name="professoremail" [(ngModel)]="professor.email" required
+                                        pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" #professoremail="ngModel"
+                                        [class.is-invalid]="professoremail.invalid && professoremail.touched">
+                                    <div
+                                        *ngIf="professoremail.errors && (professoremail.invalid && professoremail.touched)">
+                                        <small class="text-danger" *ngIf="professoremail.errors"><b>Espacios
+                                                requeridos</b></small>
+                                        <small class="text-danger" *ngIf="professoremail.errors['pattern']"><b>Email
+                                                invalido</b></small>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="genero *"
+                                        name="professorgender" [(ngModel)]="professor.gender" required
+                                        #professorgender="ngModel"
+                                        [class.is-invalid]="professorgender.invalid && professorgender.touched">
+                                    <small class="text-danger"
+                                        [class.d-none]="professorgender.valid || professorgender.untouched"><b>Espacio
+                                            requerido</b></small>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" maxlength="10" minlength="10" class="form-control"
+                                        placeholder="telefono *" name="professormobile" [(ngModel)]="professor.mobile"
+                                        required #professormobile="ngModel"
+                                        [class.is-invalid]="professormobile.invalid && professormobile.touched">
+                                    <small class="text-danger"
+                                        [class.d-none]="professormobile.valid || professormobile.untouched"><b>Espacio
+                                            requerido</b></small>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="contraseña *" name="pwd"
+                                        [(ngModel)]="professor.password" required #professorpassword="ngModel"
+                                        [class.is-invalid]="professorpassword.invalid && professorpassword.touched">
+                                    <div
+                                        *ngIf="professorpassword.errors && professorpassword.invalid && professorpassword.touched">
+                                        <small class="text-danger"
+                                            *ngIf="professorpassword.errors['required']"><b>Espacio
+                                                requerido</b></small>
+                                    </div>
+
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="departamento *" name="department"  [(ngModel)]="professor.department" required 
-                                #department="ngModel"
-                                [class.is-invalid]="department.invalid && department.touched">
-                            </div>
-                            <div class="form-group">
-                                <input type="number" class="form-control" placeholder="años de experiencia *" name="experience" [(ngModel)]="professor.experience" required 
-                                #experience="ngModel"
-                                [class.is-invalid]="experience.invalid && experience.touched">
-                                <small class="text-danger" [class.d-none]="experience.valid || experience.untouched"><b>Espacio requerido</b></small>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="titulos obtenidos *" name="degreecompleted" [(ngModel)]="professor.degreecompleted" required 
-                                #degreecompleted="ngModel"
-                                [class.is-invalid]="degreecompleted.invalid && degreecompleted.touched">
-                                <small class="text-danger" [class.d-none]="degreecompleted.valid || degreecompleted.untouched"><b>Espacio requerido</b></small>
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control" placeholder="confirmar contraseña*" name="ConfirmPassword" (ngModel)="professor.password" required 
-                                #professorconfirmPassword="ngModel"
-                                [class.is-invalid]="professorconfirmPassword.invalid && professorconfirmPassword.touched">
-                                <small class="text-danger" [class.d-none]="(professorconfirmPassword.value == professorpassword.value) || professorconfirmPassword.untouched"><b>password not matched</b></small>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="nombre de la institucion *"
+                                        name="institutionname" [(ngModel)]="professor.institutionname" required
+                                        #institutionname="ngModel"
+                                        [class.is-invalid]="institutionname.invalid && institutionname.touched">
+                                    <small class="text-danger"
+                                        [class.d-none]="institutionname.valid || institutionname.untouched"><b>Espacio
+                                            requerido</b></small>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="departamento *"
+                                        name="department" [(ngModel)]="professor.department" required
+                                        #department="ngModel"
+                                        [class.is-invalid]="department.invalid && department.touched">
+                                </div>
+                                <div class="form-group">
+                                    <input type="number" class="form-control" placeholder="años de experiencia *"
+                                        name="experience" [(ngModel)]="professor.experience" required
+                                        #experience="ngModel"
+                                        [class.is-invalid]="experience.invalid && experience.touched">
+                                    <small class="text-danger"
+                                        [class.d-none]="experience.valid || experience.untouched"><b>Espacio
+                                            requerido</b></small>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="titulos obtenidos *"
+                                        name="degreecompleted" [(ngModel)]="professor.degreecompleted" required
+                                        #degreecompleted="ngModel"
+                                        [class.is-invalid]="degreecompleted.invalid && degreecompleted.touched">
+                                    <small class="text-danger"
+                                        [class.d-none]="degreecompleted.valid || degreecompleted.untouched"><b>Espacio
+                                            requerido</b></small>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="confirmar contraseña*"
+                                        name="ConfirmPassword" (ngModel)="professor.password" required
+                                        #professorconfirmPassword="ngModel"
+                                        [class.is-invalid]="professorconfirmPassword.invalid && professorconfirmPassword.touched">
+                                    <small class="text-danger"
+                                        [class.d-none]="(professorconfirmPassword.value == professorpassword.value) || professorconfirmPassword.untouched"><b>Contraseña
+                                            no coincide</b></small>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="checkbox" style="margin-top: -8%; margin-left: 11%;">
-                        <small style="color: gray;"><input type="checkbox" class="checkbox" name="remember" required>acepto terminos y condiciones</small>
-                    </div>
-                    <div style="margin-top: -3%; margin-left: 58.5%; margin-bottom: 3%; color: rgb(0, 0, 0); font-size: 16px;">Ya tienes cuenta aqui? 
-                        <small [routerLink]="['/login']" style="color: navy; text-align: center; cursor: pointer;"><b>click aqui</b></small>
-                    </div>
-                    <button  [disabled]="professorform.form.invalid" type="submit" class="btnRegister">Registrarse</button>
-                </form>
+                        <div class="checkbox" style="margin-top: -8%; margin-left: 11%;">
+                            <small style="color: gray;"><input type="checkbox" class="checkbox" name="remember"
+                                    required>acepto terminos y condiciones</small>
+                        </div>
+                        <div
+                            style="margin-top: -3%; margin-left: 58.5%; margin-bottom: 3%; color: rgb(0, 0, 0); font-size: 16px;">
+                            Ya tienes cuenta aqui?
+                            <small [routerLink]="['/login']"
+                                style="color: navy; text-align: center; cursor: pointer;"><b>click aqui</b></small>
+                        </div>
+                        <button [disabled]="professorform.form.invalid" type="submit"
+                            class="btnRegister">Registrarse</button>
+                    </form>
                 </div>
             </div>
         </div>
