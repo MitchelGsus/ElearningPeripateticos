@@ -158,7 +158,7 @@
                                 <input type="password" class="form-control" placeholder="confirmar contraseña*" name="ConfirmPassword" (ngModel)="professor.password" required 
                                 #professorconfirmPassword="ngModel"
                                 [class.is-invalid]="professorconfirmPassword.invalid && professorconfirmPassword.touched">
-                                <small class="text-danger" [class.d-none]="(professorconfirmPassword.value == professorpassword.value) || professorconfirmPassword.untouched"><b>Contraseña no coincide</b></small>
+                                <small class="text-danger" [class.d-none]="(professorconfirmPassword.value == professorpassword.value) || professorconfirmPassword.untouched"><b>password not matched</b></small>
                             </div>
                         </div>
                     </div>
@@ -168,7 +168,7 @@
                     <div style="margin-top: -3%; margin-left: 58.5%; margin-bottom: 3%; color: rgb(0, 0, 0); font-size: 16px;">Ya tienes cuenta aqui? 
                         <small [routerLink]="['/login']" style="color: navy; text-align: center; cursor: pointer;"><b>click aqui</b></small>
                     </div>
-                    <button [disabled]="professorform.form.invalid" type="submit" class="btnRegister">Registrarse</button>
+                    <button  [disabled]="professorform.form.invalid" type="submit" class="btnRegister">Registrarse</button>
                 </form>
                 </div>
             </div>
