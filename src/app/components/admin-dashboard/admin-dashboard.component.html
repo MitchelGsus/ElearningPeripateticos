@@ -6,7 +6,7 @@
         <img [src]="'assets/img/admin.png'" alt="Card image" style="width:100%">
       </div>
       <div style="margin-left: auto; margin-right: auto;" class="card-body">
-        <h4 style="font-weight: bolder;" class="card-title"><b>Admin</b></h4>
+        <h4 style="font-weight: bolder;" class="card-title"><b>{{name}}</b></h4>
       </div>
     </div>
 
@@ -46,36 +46,38 @@
     <div class="dashboard-card" style="background-color: white; box-shadow: 4px 4px 25px 5px gray;">
       <div class="circle"><i id="icons" style="margin-left: 30px;" class="fa fa-user"></i></div>
       <div class="text">Usuarios</div>
-      <div class="sub-text"> Usuarios registrados</div>
+      <div class="sub-text" *ngFor="let user of users | async">{{user}} Usuarios registrados</div>
     </div>
     <div class="dashboard-card" style="background-color: white; box-shadow: 4px 4px 25px 5px gray;">
       <div class="circle"><i id="icons" style="margin-left: 25px;" class="fa fa-user-o"></i></div>
       <div class="text">Professors</div>
-      <div class="sub-text"> Professors currently teaching the
+      <div class="sub-text" *ngFor="let professor of professors | async">{{professor}} Professors currently teaching the
         learners</div>
     </div>
     <div class="dashboard-card" style="background-color: white; box-shadow: 4px 4px 25px 5px gray;">
       <div class="circle"><i id="icons" style="margin-left: 25px;" class="fa fa-trophy"></i></div>
       <div class="text">Courses</div>
-      <div class="sub-text"> courses available</div>
+      <div class="sub-text" *ngFor="let course of courses | async">{{course}} courses available</div>
     </div>
     <div class="dashboard-card" style="background-color: white; box-shadow: 4px 4px 25px 5px gray;">
       <div class="circle"><i id="icons" style="margin-left: 15px;" class="fa fa-graduation-cap"></i></div>
       <div class="text">Estudiantes</div>
-      <div class="sub-text"> enrollments have been made by <b></b>
-        Learners</div>
+      <div class="sub-text" *ngFor="let count of enrollmentcount | async">{{count}} enrollments have been made by
+        <b></b>
+        Learners
+      </div>
     </div>
     <div class="dashboard-card" style="background-color: white; box-shadow: 4px 4px 25px 5px gray;">
       <div class="circle"><i id="icons" style="margin-left: 20px;" class="fa fa-list"></i></div>
       <div class="text">Modulos</div>
-      <div class="sub-text"> courses are with its <br>detailed
+      <div class="sub-text" *ngFor="let chapter of chapters | async">{{chapter}} courses are with its <br>detailed
         chapters</div>
     </div>
     <div class="dashboard-card" style="background-color: white; box-shadow: 4px 4px 25px 5px gray;">
       <div class="circle"><i id="icons" style="margin-left: 20px;" class="fa fa-heart"></i></div>
-      <div class="text">Favoritos</div>
-      <div class="sub-text"> courses are loved by most of the
-        Leaners </div>
+      <div class="text">Lista de deseos</div>
+      <div class="sub-text" *ngFor="let wishlists of wishlist | async">{{wishlists}} cursos mas gustados por los
+        estudiantes </div>
     </div>
   </div>
 </div>
