@@ -16,7 +16,7 @@ const routes: Routes = [
   {path:'registration',component:RegistrationComponent},
   {path:'registrationsuccess',component:RegistrationsuccessComponent},
   {path:'login',component:LoginComponent},
-  {path:'profesordashboard',component:DashboardteacherComponent},
+  {path:'professordashboard',component:DashboardteacherComponent},
   {path:'usuariodashboard',component:UserComponent},
   {path:'addcourse',component:AddcourseComponent},
   {path:'admindashboard',component:AdminDashboardComponent},

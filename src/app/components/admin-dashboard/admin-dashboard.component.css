@@ -122,6 +122,7 @@
 }
 
 .container {
+  padding-top: 45vh;
   margin-left: 23%;
   margin-top: -72%;
   overflow-x: hidden;
