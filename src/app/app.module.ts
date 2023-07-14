@@ -10,6 +10,8 @@ import { DashboardteacherComponent } from './components/dashboardteacher/dashboa
 import { UserComponent } from './components/user/user.component';
 import { AddcourseComponent } from './components/addcourse/addcourse.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { AdminDashboardComponent } from './components/admin-dashboard/admin-dash
     DashboardteacherComponent,
     UserComponent,
     AddcourseComponent,
-    AdminDashboardComponent
+    AdminDashboardComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
