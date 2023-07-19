@@ -25,6 +25,7 @@ import { AddchapterComponent } from './components/addchapter/addchapter.componen
 import { CourselistComponent } from './components/courselist/courselist.component';
 import { AddprofessorComponent } from './components/addprofessor/addprofessor.component';
 import { MywishlistComponent } from './components/mywishlist/mywishlist.component';
+import { FullcourseComponent } from './components/fullcourse/fullcourse.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +45,8 @@ import { MywishlistComponent } from './components/mywishlist/mywishlist.componen
     AddchapterComponent,
     CourselistComponent,
     AddprofessorComponent,
-    MywishlistComponent
+    MywishlistComponent,
+    FullcourseComponent
   ],
   imports: [
     BrowserModule,
