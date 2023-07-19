@@ -15,6 +15,8 @@ import { ProfessorGuard } from './guards/professor.guard';
 import { ProfessorlistComponent } from './components/professorlist/professorlist.component';
 import { AddchapterComponent } from './components/addchapter/addchapter.component';
 import { CourselistComponent } from './components/courselist/courselist.component';
+import { AddprofessorComponent } from './components/addprofessor/addprofessor.component';
+import { AdminGuard } from './guards/admin.guard';
 
 
 
@@ -30,10 +32,10 @@ const routes: Routes = [
   { path: 'approveprofessor', component: ApprovalstatusComponent, canActivate: [RouterGuard] },
   { path: 'editprofessorprofile', component: ProfessorprofileComponent, canActivate: [ProfessorGuard] },
   { path: 'professorlist', component: ProfessorlistComponent, canActivate: [RouterGuard] },
-  {path:'addchapter',component:AddchapterComponent,canActivate:[RouterGuard]},
-  {path:'courselist',component:CourselistComponent,canActivate:[RouterGuard]},
-  {path:'userlist',component:UserComponent,canActivate:[RouterGuard]},
-
+  { path: 'addchapter', component: AddchapterComponent, canActivate: [RouterGuard] },
+  { path: 'courselist', component: CourselistComponent, canActivate: [RouterGuard] },
+  { path: 'userlist', component: UserComponent, canActivate: [RouterGuard] },
+  { path: 'addProfessor', component: AddprofessorComponent, canActivate: [AdminGuard] },
 ];
 
 @NgModule({
