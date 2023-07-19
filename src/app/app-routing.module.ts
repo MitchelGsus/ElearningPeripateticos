@@ -32,6 +32,8 @@ const routes: Routes = [
   { path: 'professorlist', component: ProfessorlistComponent, canActivate: [RouterGuard] },
   {path:'addchapter',component:AddchapterComponent,canActivate:[RouterGuard]},
   {path:'courselist',component:CourselistComponent,canActivate:[RouterGuard]},
+  {path:'userlist',component:UserComponent,canActivate:[RouterGuard]},
+
 ];
 
 @NgModule({
