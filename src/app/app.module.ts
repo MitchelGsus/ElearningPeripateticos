@@ -20,6 +20,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { RegistrationsuccessComponent } from './components/registrationsuccess/registrationsuccess.component';
 import { ApprovalstatusComponent } from './components/approvalstatus/approvalstatus.component';
 import { ProfessorprofileComponent } from './components/professorprofile/professorprofile.component';
+import { ProfessorlistComponent } from './components/professorlist/professorlist.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,8 @@ import { ProfessorprofileComponent } from './components/professorprofile/profess
     FooterComponent,
     RegistrationsuccessComponent,
     ApprovalstatusComponent,
-    ProfessorprofileComponent
+    ProfessorprofileComponent,
+    ProfessorlistComponent
   ],
   imports: [
     BrowserModule,
