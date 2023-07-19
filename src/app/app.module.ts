@@ -18,6 +18,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { RegistrationsuccessComponent } from './components/registrationsuccess/registrationsuccess.component';
+import { ApprovalstatusComponent } from './components/approvalstatus/approvalstatus.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { RegistrationsuccessComponent } from './components/registrationsuccess/r
     AdminDashboardComponent,
     HeaderComponent,
     FooterComponent,
-    RegistrationsuccessComponent
+    RegistrationsuccessComponent,
+    ApprovalstatusComponent
   ],
   imports: [
     BrowserModule,

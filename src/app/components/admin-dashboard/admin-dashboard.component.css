@@ -3,10 +3,8 @@
 
 
 .sidebar-container {
-  position: relative;
   width: 235px;
-  height: 970px;
-  left: 0;
+  height: 1000px;
   overflow-x: hidden;
   overflow-y: hidden;
   background: #1a1a1a;
