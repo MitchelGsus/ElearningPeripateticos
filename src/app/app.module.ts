@@ -22,6 +22,7 @@ import { ApprovalstatusComponent } from './components/approvalstatus/approvalsta
 import { ProfessorprofileComponent } from './components/professorprofile/professorprofile.component';
 import { ProfessorlistComponent } from './components/professorlist/professorlist.component';
 import { AddchapterComponent } from './components/addchapter/addchapter.component';
+import { CourselistComponent } from './components/courselist/courselist.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,8 @@ import { AddchapterComponent } from './components/addchapter/addchapter.componen
     ApprovalstatusComponent,
     ProfessorprofileComponent,
     ProfessorlistComponent,
-    AddchapterComponent
+    AddchapterComponent,
+    CourselistComponent
   ],
   imports: [
     BrowserModule,
