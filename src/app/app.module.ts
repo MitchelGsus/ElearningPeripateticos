@@ -19,6 +19,7 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { RegistrationsuccessComponent } from './components/registrationsuccess/registrationsuccess.component';
 import { ApprovalstatusComponent } from './components/approvalstatus/approvalstatus.component';
+import { ProfessorprofileComponent } from './components/professorprofile/professorprofile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import { ApprovalstatusComponent } from './components/approvalstatus/approvalsta
     HeaderComponent,
     FooterComponent,
     RegistrationsuccessComponent,
-    ApprovalstatusComponent
+    ApprovalstatusComponent,
+    ProfessorprofileComponent
   ],
   imports: [
     BrowserModule,
