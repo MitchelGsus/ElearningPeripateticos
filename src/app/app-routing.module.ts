@@ -6,7 +6,7 @@ import { LoginComponent } from './components/login/login.component';
 import { DashboardteacherComponent } from './components/dashboardteacher/dashboardteacher.component';
 import { UserComponent } from './components/user/user.component';
 import { AddcourseComponent } from './components/addcourse/addcourse.component';
-import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { AdmindashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 
 
 
@@ -17,7 +17,7 @@ const routes: Routes = [
   {path:'profesordashboard',component:DashboardteacherComponent},
   {path:'usuariodashboard',component:UserComponent},
   {path:'addcourse',component:AddcourseComponent},
-  {path:'admindashboard',component:AdminDashboardComponent},
+  {path:'admindashboard',component:AdmindashboardComponent},
 ];
 
 @NgModule({
