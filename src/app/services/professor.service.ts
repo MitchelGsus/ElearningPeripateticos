@@ -58,7 +58,7 @@ export class ProfessorService {
   }
 
   getCourseListNames(): Observable<any> {
-    return this._http.get(`${NAV_URL}/getcoursenames/`);
+    return this._http.get(`${NAV_URL}/getcoursenames`);
   }
 
 }
