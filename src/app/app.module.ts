@@ -21,6 +21,7 @@ import { RegistrationsuccessComponent } from './components/registrationsuccess/r
 import { ApprovalstatusComponent } from './components/approvalstatus/approvalstatus.component';
 import { ProfessorprofileComponent } from './components/professorprofile/professorprofile.component';
 import { ProfessorlistComponent } from './components/professorlist/professorlist.component';
+import { AddchapterComponent } from './components/addchapter/addchapter.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,8 @@ import { ProfessorlistComponent } from './components/professorlist/professorlist
     RegistrationsuccessComponent,
     ApprovalstatusComponent,
     ProfessorprofileComponent,
-    ProfessorlistComponent
+    ProfessorlistComponent,
+    AddchapterComponent
   ],
   imports: [
     BrowserModule,
