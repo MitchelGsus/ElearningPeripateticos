@@ -1,1 +1,112 @@
-<p>addcourse works!</p>
+<app-header></app-header>
+
+<div class="container register">
+  <div class="row">
+    <div class="col-md-9 register-right">
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+          <h3 class="register-heading"><i class="fa fa-sticky-note-o"></i> Nuevo Curso</h3>
+          <small class="text-danger"><b>{{msg}}</b></small>
+          <form #courseform="ngForm" (ngSubmit)="addCourse()">
+            <div class="row register-form">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Curso: <b style="color:red;">*</b></label>
+                  <input type="text" class="form-control" placeholder="Nombre del Curso" name="coursename"
+                    [(ngModel)]="course.coursename" required #coursename="ngModel"
+                    [class.is-invalid]="coursename.invalid && coursename.touched">
+                  <small class="text-danger" [class.d-none]="coursename.valid || coursename.untouched"><b>Este campo es
+                      requerido</b></small>
+                </div>
+                <div class="form-group">
+                  <label>Instructor: <b style="color:red;">*</b></label>
+                  <input type="text" class="form-control" placeholder="Nombre del Instructor" name="coursename"
+                    [(ngModel)]="course.instructorname" required #instructorname="ngModel"
+                    [class.is-invalid]="instructorname.invalid && instructorname.touched">
+                  <small class="text-danger"
+                    [class.d-none]="instructorname.valid || instructorname.untouched"><b>required field</b></small>
+                </div>
+                <div class="form-group" style="display: none;" id="youtubelink">
+                  <label>ID del Video del Curso: (only ID) <b style="color:red;">*</b></label>
+                  <input type="url" class="form-control" placeholder="Menciona la url del sitio" name="youtubeurl"
+                    [(ngModel)]="course.youtubeurl" required #youtubeurl="ngModel"
+                    [class.is-invalid]="youtubeurl.invalid && youtubeurl.touched">
+                  <small class="text-danger" [class.d-none]="youtubeurl.valid || youtubeurl.untouched"><b>Este campo es
+                      requerido</b></small>
+                </div>
+                <div class="form-group">
+                  <label>Tipo de Curso: <b style="color:red;">*</b></label>
+                  <select class="form-control" id="sel1" name="coursetype" [(ngModel)]="course.coursetype"
+                    #coursetype="ngModel">
+                    <option value="Website">Sitio Web</option>
+                    <option value="Youtube">Youtube</option>
+                    <option>Interaccion en Vivo</option>
+                    <option>Clases de Google</option>
+                    <option>Otros</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Lenguage: <b style="color:red;">*</b></label>
+                  <select class="form-control" id="sel1" name="language" [(ngModel)]="course.language"
+                    #language="ngModel">
+                    <option>Español</option>
+                    <option>Ingles</option>
+                    <option>Chino</option>
+                    <option>Otros</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Fecha de Inicio: <b style="color:red;">*</b></label>
+                  <input type="date" class="form-control" placeholder="select enrolled date" name="enrolleddate"
+                    [(ngModel)]="course.enrolleddate" required #enrolleddate="ngModel"
+                    [class.is-invalid]="enrolleddate.invalid && enrolleddate.touched">
+                  <small class="text-danger" [class.d-none]="enrolleddate.valid || enrolleddate.untouched"><b>Este campo
+                      es requerido</b></small>
+                </div>
+                <div class="form-group">
+                  <label>Institucion del Instructor: <b style="color:red;">*</b></label>
+                  <input type="text" class="form-control" placeholder="institucion del instructor"
+                    name="instructorinstitution" [(ngModel)]="course.instructorinstitution" required
+                    #instructorinstitution="ngModel"
+                    [class.is-invalid]="instructorinstitution.invalid && instructorinstitution.touched">
+                  <small class="text-danger"
+                    [class.d-none]="instructorinstitution.valid || instructorinstitution.untouched"><b>Este campo es
+                      requerido</b></small>
+                </div>
+                <div class="form-group" style="display: none;" id="websitelink">
+                  <label>URL del Curso en la Web: <b style="color:red;">*</b></label>
+                  <input type="url" class="form-control" placeholder="please mention website url" name="websiteurl"
+                    [(ngModel)]="course.websiteurl" #websiteurl="ngModel"
+                    [class.is-invalid]="websiteurl.invalid && websiteurl.touched">
+                </div>
+                <div class="form-group">
+                  <label>Nivel de habilidades: <b style="color:red;">*</b></label>
+                  <select class="form-control" id="sel1" name="skilllevel" [(ngModel)]="course.skilllevel"
+                    #skilllevel="ngModel">
+                    <option>Basico</option>
+                    <option>Intermedio</option>
+                    <option>Avanzado</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="description">Descripcion del Curso: <b style="color:red;">*</b></label>
+                  <textarea type="text" rows="4" class="form-control" placeholder="Ingresa la descripcion del curso"
+                    name="prescription" [(ngModel)]="course.description" required #description="ngModel"
+                    [class.is-invalid]="description.invalid && description.touched"></textarea>
+                  <small class="text-danger" [class.d-none]="description.valid || description.untouched"><b>Este campo
+                      es requerido</b></small>
+                </div>
+              </div>
+            </div>
+            <button [disabled]="courseform.form.invalid" type="submit" class="btnRegister"><i class="fa fa-plus"></i>
+              Add Course</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<my-app-footer></my-app-footer>
