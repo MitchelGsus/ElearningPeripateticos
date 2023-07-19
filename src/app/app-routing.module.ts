@@ -6,18 +6,28 @@ import { LoginComponent } from './components/login/login.component';
 import { DashboardteacherComponent } from './components/dashboardteacher/dashboardteacher.component';
 import { UserComponent } from './components/user/user.component';
 import { AddcourseComponent } from './components/addcourse/addcourse.component';
-import { AdmindashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { RegistrationsuccessComponent } from './components/registrationsuccess/registrationsuccess.component';
+import { ApprovalstatusComponent } from './components/approvalstatus/approvalstatus.component';
+import { RouterGuard } from './guards/router.guard';
+import { ProfessorprofileComponent } from './components/professorprofile/professorprofile.component';
+import { ProfessorGuard } from './guards/professor.guard';
+import { ProfessorlistComponent } from './components/professorlist/professorlist.component';
 
 
 
 const routes: Routes = [
-  {path:'',component:HomeComponent},
-  {path:'registration',component:RegistrationComponent},
-  {path:'login',component:LoginComponent},
-  {path:'profesordashboard',component:DashboardteacherComponent},
-  {path:'usuariodashboard',component:UserComponent},
-  {path:'addcourse',component:AddcourseComponent},
-  {path:'admindashboard',component:AdmindashboardComponent},
+  { path: '', component: HomeComponent },
+  { path: 'registration', component: RegistrationComponent },
+  { path: 'registrationsuccess', component: RegistrationsuccessComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'professordashboard', component: DashboardteacherComponent },
+  { path: 'usuariodashboard', component: UserComponent },
+  { path: 'addCourse', component: AddcourseComponent },
+  { path: 'admindashboard', component: AdminDashboardComponent },
+  { path: 'approveprofessor', component: ApprovalstatusComponent, canActivate: [RouterGuard] },
+  { path: 'editprofessorprofile', component: ProfessorprofileComponent, canActivate: [ProfessorGuard] },
+  { path: 'professorlist', component: ProfessorlistComponent, canActivate: [RouterGuard] },
 ];
 
 @NgModule({

@@ -10,7 +10,17 @@ import { DashboardteacherComponent } from './components/dashboardteacher/dashboa
 import { UserComponent } from './components/user/user.component';
 import { AddcourseComponent } from './components/addcourse/addcourse.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
-
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { YouTubePlayerModule } from '@angular/youtube-player';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { RegistrationsuccessComponent } from './components/registrationsuccess/registrationsuccess.component';
+import { ApprovalstatusComponent } from './components/approvalstatus/approvalstatus.component';
+import { ProfessorprofileComponent } from './components/professorprofile/professorprofile.component';
+import { ProfessorlistComponent } from './components/professorlist/professorlist.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,13 +30,25 @@ import { AdminDashboardComponent } from './components/admin-dashboard/admin-dash
     DashboardteacherComponent,
     UserComponent,
     AddcourseComponent,
-    AdminDashboardComponent
+    AdminDashboardComponent,
+    HeaderComponent,
+    FooterComponent,
+    RegistrationsuccessComponent,
+    ApprovalstatusComponent,
+    ProfessorprofileComponent,
+    ProfessorlistComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    CarouselModule,
+    YouTubePlayerModule,
+    MDBBootstrapModule.forRoot()
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, RegistrationComponent]
 })
 export class AppModule { }

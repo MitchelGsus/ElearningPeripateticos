@@ -8,7 +8,7 @@ import { AdminService } from 'src/app/services/admin.service';
   templateUrl: './admin-dashboard.component.html',
   styleUrls: ['./admin-dashboard.component.css']
 })
-export class AdmindashboardComponent implements OnInit {
+export class AdminDashboardComponent implements OnInit {
 
   name = 'admin';
   gender = '';
