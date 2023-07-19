@@ -17,6 +17,7 @@ import { AddchapterComponent } from './components/addchapter/addchapter.componen
 import { CourselistComponent } from './components/courselist/courselist.component';
 import { AddprofessorComponent } from './components/addprofessor/addprofessor.component';
 import { AdminGuard } from './guards/admin.guard';
+import { MywishlistComponent } from './components/mywishlist/mywishlist.component';
 
 
 
@@ -36,6 +37,8 @@ const routes: Routes = [
   { path: 'courselist', component: CourselistComponent, canActivate: [RouterGuard] },
   { path: 'userlist', component: UserComponent, canActivate: [RouterGuard] },
   { path: 'addProfessor', component: AddprofessorComponent, canActivate: [AdminGuard] },
+  {path:'mywishlist',component:MywishlistComponent,canActivate:[RouterGuard]},
+
 ];
 
 @NgModule({
