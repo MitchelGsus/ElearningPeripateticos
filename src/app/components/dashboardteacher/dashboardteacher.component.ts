@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
+import { Observable } from 'rxjs';
+import { AdminService } from 'src/app/services/admin.service';
 
 @Component({
   selector: 'my-app-dashboardteacher',
@@ -7,7 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardteacherComponent implements OnInit {
 
-  constructor() { }
+  loggedUser = '';
+  currRole = '';
+  courses : Observable<any[]> | undefined;
+  enrollments : Observable<any[]> | undefined;
+  enrollmentcount : Observable<any[]> | undefined;
+  wishlist : Observable<any[]> | undefined;
+  chapters : Observable<any[]> | undefined;
+  constructor(private _service : AdminService) { }
 
   ngOnInit(): void {
 
@@ -29,6 +39,12 @@ export class DashboardteacherComponent implements OnInit {
       $("#btn").removeClass("fa-ellipsis-v").addClass("fa-bars");
      }
     }
+
+    this.courses = this._service.getTotalCourses();
+    this.enrollments = this._service.getTotalEnrollments();
+    this.enrollmentcount = this._service.getTotalEnrollmentCount();
+    this.wishlist = this._service.getTotalWishlist();
+    this.chapters = this._service.getTotalChapters();
   }
 
 }

@@ -12,14 +12,14 @@ import { RegistrationsuccessComponent } from './components/registrationsuccess/r
 
 
 const routes: Routes = [
-  {path:'',component:HomeComponent},
-  {path:'registration',component:RegistrationComponent},
-  {path:'registrationsuccess',component:RegistrationsuccessComponent},
-  {path:'login',component:LoginComponent},
-  {path:'profesordashboard',component:DashboardteacherComponent},
-  {path:'usuariodashboard',component:UserComponent},
-  {path:'addcourse',component:AddcourseComponent},
-  {path:'admindashboard',component:AdminDashboardComponent},
+  { path: '', component: HomeComponent },
+  { path: 'registration', component: RegistrationComponent },
+  { path: 'registrationsuccess', component: RegistrationsuccessComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'professordashboard', component: DashboardteacherComponent },
+  { path: 'usuariodashboard', component: UserComponent },
+  { path: 'addCourse', component: AddcourseComponent },
+  { path: 'admindashboard', component: AdminDashboardComponent },
 ];
 
 @NgModule({
