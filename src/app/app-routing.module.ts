@@ -10,6 +10,8 @@ import { AdminDashboardComponent } from './components/admin-dashboard/admin-dash
 import { RegistrationsuccessComponent } from './components/registrationsuccess/registrationsuccess.component';
 import { ApprovalstatusComponent } from './components/approvalstatus/approvalstatus.component';
 import { RouterGuard } from './guards/router.guard';
+import { ProfessorprofileComponent } from './components/professorprofile/professorprofile.component';
+import { ProfessorGuard } from './guards/professor.guard';
 
 
 
@@ -23,6 +25,7 @@ const routes: Routes = [
   { path: 'addCourse', component: AddcourseComponent },
   { path: 'admindashboard', component: AdminDashboardComponent },
   { path: 'approveprofessor', component: ApprovalstatusComponent, canActivate: [RouterGuard] },
+  { path: 'editprofessorprofile',component:ProfessorprofileComponent,canActivate:[ProfessorGuard]},
 ];
 
 @NgModule({
