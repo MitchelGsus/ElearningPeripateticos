@@ -24,6 +24,7 @@ import { ProfessorlistComponent } from './components/professorlist/professorlist
 import { AddchapterComponent } from './components/addchapter/addchapter.component';
 import { CourselistComponent } from './components/courselist/courselist.component';
 import { AddprofessorComponent } from './components/addprofessor/addprofessor.component';
+import { MywishlistComponent } from './components/mywishlist/mywishlist.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +43,8 @@ import { AddprofessorComponent } from './components/addprofessor/addprofessor.co
     ProfessorlistComponent,
     AddchapterComponent,
     CourselistComponent,
-    AddprofessorComponent
+    AddprofessorComponent,
+    MywishlistComponent
   ],
   imports: [
     BrowserModule,
