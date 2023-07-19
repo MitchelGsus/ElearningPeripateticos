@@ -8,6 +8,8 @@ import { UserComponent } from './components/user/user.component';
 import { AddcourseComponent } from './components/addcourse/addcourse.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { RegistrationsuccessComponent } from './components/registrationsuccess/registrationsuccess.component';
+import { ApprovalstatusComponent } from './components/approvalstatus/approvalstatus.component';
+import { RouterGuard } from './guards/router.guard';
 
 
 
@@ -20,6 +22,7 @@ const routes: Routes = [
   { path: 'usuariodashboard', component: UserComponent },
   { path: 'addCourse', component: AddcourseComponent },
   { path: 'admindashboard', component: AdminDashboardComponent },
+  { path: 'approveprofessor', component: ApprovalstatusComponent, canActivate: [RouterGuard] },
 ];
 
 @NgModule({
