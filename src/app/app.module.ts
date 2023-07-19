@@ -23,6 +23,7 @@ import { ProfessorprofileComponent } from './components/professorprofile/profess
 import { ProfessorlistComponent } from './components/professorlist/professorlist.component';
 import { AddchapterComponent } from './components/addchapter/addchapter.component';
 import { CourselistComponent } from './components/courselist/courselist.component';
+import { AddprofessorComponent } from './components/addprofessor/addprofessor.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,8 @@ import { CourselistComponent } from './components/courselist/courselist.componen
     ProfessorprofileComponent,
     ProfessorlistComponent,
     AddchapterComponent,
-    CourselistComponent
+    CourselistComponent,
+    AddprofessorComponent
   ],
   imports: [
     BrowserModule,
