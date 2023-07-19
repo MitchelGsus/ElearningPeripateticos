@@ -97,7 +97,12 @@ export class AddchapterComponent implements OnInit {
     this._service.addNewChapters(this.chapter).subscribe(
       data => {
         console.log("chapter added Successfully !!!");
-        this._router.navigate(['/professordashboard']);
+        const rol = sessionStorage.getItem('ROLE');
+        if(rol=="professor"){
+          this._router.navigate(['/professordashboard']);
+        }else{
+          this._router.navigate(['/admindashboard']);
+        }
       },
       error => {
         console.log("chapter adding Failed !!!");
