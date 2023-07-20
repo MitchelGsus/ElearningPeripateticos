@@ -47,6 +47,85 @@ export class FullcourseComponent implements OnInit {
 
   }
 
+  // Agrega una variable para almacenar el texto objetivo de la respuesta
+  respuestaCorrecta1: string =
+    `
+    import java.sql.Connection;
+    import java.sql.DriverManager;
+    import java.sql.SQLException;
+    
+    public class ConexionBD {
+        public static void main(String[] args) {
+            // Datos de conexión a la base de datos
+            String url = "jdbc:mysql://localhost:3306/nombre_basedatos";
+            String usuario = "root";
+            String contraseña = "";
+    
+            // Establecer conexión
+            try {
+                Connection conexion = DriverManager.getConnection(url, usuario, contraseña);
+                System.out.println("Conexión exitosa a la base de datos MySQL");
+                
+                System.out.println("Conexión cerrada correctamente");
+            } catch (SQLException e) {
+                System.out.println("Error al establecer conexión: " + e.getMessage());
+            }
+        }
+    }
+`;
+  respuestaCorrecta2: string =
+    `
+    import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
+
+@SpringBootApplication
+public class MyApp {
+
+    public static void main(String[] args) {
+        SpringApplication.run(MyApp.class, args);
+    }
+
+    @EnableWebSecurity
+    public static class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+        @Override
+        protected void configure(HttpSecurity http) throws Exception {
+            http
+                .authorizeRequests()
+                    .antMatchers("/form").permitAll()
+                    .anyRequest().authenticated()
+                    .and()
+                .formLogin()
+                    .and()
+                .csrf()
+                    .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse()); // Habilitar protección CSRF
+        }
+    }
+}
+
+`;
+
+  // Método para verificar la respuesta del usuario
+  checkResponse() {
+    // Obtener el contenido del textarea
+    const userResponse1 = (<HTMLTextAreaElement>document.getElementById('userResponse1')).value;
+    const userResponse2 = (<HTMLTextAreaElement>document.getElementById('userResponse2')).value;
+
+    // Comprobar si la respuesta del usuario es igual a la respuesta objetivo
+    if (userResponse1.trim() === this.respuestaCorrecta1.trim() || userResponse2.trim() === this.respuestaCorrecta2.trim()) {
+      // Respuesta correcta
+      alert('¡Respuesta Correcta!');
+    } else {
+      // Respuesta incorrecta
+      alert('Respuesta Incorrecta. Inténtalo nuevamente.');
+    }
+  }
+
   openOverview() {
     $("#overview").show();
     $("#qa,#announcements,#notes,#downloads").hide();
