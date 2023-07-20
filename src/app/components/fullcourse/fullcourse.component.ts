@@ -21,7 +21,11 @@ export class FullcourseComponent implements OnInit {
   courselist: Observable<Course[]> | undefined;
   chapter = new Chapter();
 
-  constructor(private _router: Router, private _service: UserService, private activatedRoute: ActivatedRoute) { }
+  constructor(
+    private _router: Router,
+    private _service: UserService,
+    private activatedRoute: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
 
