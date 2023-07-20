@@ -11,6 +11,7 @@
     margin-bottom: 4%;
     width: 40%;
     border-radius: 15px;
+    margin-bottom: 100px;
     padding: 0px;
     transition: transform .2s;
     box-shadow: 5px 5px 25px 8px rgb(147, 158, 147);
@@ -25,6 +26,9 @@
   margin-top: -33%;
   margin-left: 40%;
   margin-bottom: 6%;
+}
+.before-text{
+  padding-top: 75px;
 }
 .text{
   font-family: serif;
@@ -47,7 +51,7 @@
     margin-left: auto;
     margin-right: auto;
     align-content: center;
-    margin-top: 42%;
+    margin-top: 20%;
     margin-bottom: auto;
     border-radius: 50%;
     width: 75%;
