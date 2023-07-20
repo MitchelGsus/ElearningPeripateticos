@@ -19,58 +19,92 @@
         will be adding the chapters soon here</div>
 
       <div style="cursor: pointer;" (click)="set1()" class="chapter1" *ngIf="chapter.chapter1name !== ''">
-        <div class="box1" id="select-box"><i class="fa fa-check"></i></div>
-        <div class="name" (click)="openChapter(chapter.chapter1id)"> 1) {{chapter.chapter1name}}</div>
-        <div style="color: gray; font-weight: 600; font-size: small; margin-left: 12%;">subcontents (1/1)</div>
+        <div class="tittle_chapter">
+          <div class="box1" id="select-box"><i class="fa fa-check"></i></div>
+          <div class="name" (click)="openChapter(chapter.chapter1id)"> 1) {{chapter.chapter1name}}</div>
+        </div>
+        <div class="challenge">
+          <h2>Challenge</h2>
+          <div class="error_name">
+            {{chapter.challenge1name}}
+          </div>
+          <div class="error_description">
+            {{chapter.challenge1description}}
+          </div>
+          <div class="code_view_lines">
+            <pre><code class="code-highlight">{{chapter.challenge1code}}</code>
+            </pre>
+          </div>
+          <div class="origin">
+            {{chapter.challenge1origin}}
+          </div>
+        </div>
       </div>
       <hr *ngIf="chapter.chapter1name !== ''">
 
       <div style="cursor: pointer;" (click)="set2()" class="chapter2" *ngIf="chapter.chapter2name !== ''">
-        <div class="box2" id="select-box"><i class="fa fa-check"></i></div>
-        <div class="name" (click)="openChapter(chapter.chapter2id)"> 2) {{chapter.chapter2name}}</div>
-        <div style="color: gray; font-weight: 600; font-size: small; margin-left: 12%;">subcontents (1/1)</div>
+        <div class="tittle_chapter">
+          <div class="box2" id="select-box"><i class="fa fa-check"></i></div>
+          <div class="name" (click)="openChapter(chapter.chapter2id)"> 2) {{chapter.chapter2name}}</div>
+        </div>
+        <div class="challenge">
+          <h2>Challenge</h2>
+          <div class="error_name">
+            {{chapter.challenge2name}}
+          </div>
+          <div class="error_description">
+            {{chapter.challenge2description}}
+          </div>
+          <div class="code_view_lines">
+            <pre><code class="code-highlight">{{chapter.challenge2code}}</code>
+            </pre>
+          </div>
+          <div class="origin">
+            {{chapter.challenge2origin}}
+          </div>
+        </div>
       </div>
       <hr *ngIf="chapter.chapter2name !== ''">
 
       <div style="cursor: pointer;" (click)="set3()" class="chapter3" *ngIf="chapter.chapter3name !== ''">
         <div class="box3" id="select-box"><i class="fa fa-check"></i></div>
         <div class="name" (click)="openChapter(chapter.chapter3id)"> 3) {{chapter.chapter3name}}</div>
-        <div style="color: gray; font-weight: 600; font-size: small; margin-left: 12%;">subcontents (1/1)</div>
+
       </div>
       <hr *ngIf="chapter.chapter3name !== ''">
 
       <div style="cursor: pointer;" (click)="set4()" class="chapter4" *ngIf="chapter.chapter4name !== ''">
         <div class="box4" id="select-box"><i class="fa fa-check"></i></div>
         <div class="name" (click)="openChapter(chapter.chapter4id)"> 4) {{chapter.chapter4name}}</div>
-        <div style="color: gray; font-weight: 600; font-size: small; margin-left: 12%;">subcontents (1/1)</div>
+
       </div>
       <hr *ngIf="chapter.chapter4name !== ''">
 
       <div style="cursor: pointer;" (click)="set5()" class="chapter5" *ngIf="chapter.chapter5name !== ''">
         <div class="box5" id="select-box"><i class="fa fa-check"></i></div>
         <div class="name" (click)="openChapter(chapter.chapter5id)"> 5) {{chapter.chapter5name}}</div>
-        <div style="color: gray; font-weight: 600; font-size: small; margin-left: 12%;">subcontents (1/1)</div>
+
       </div>
       <hr *ngIf="chapter.chapter5name !== ''">
 
       <div style="cursor: pointer;" (click)="set6()" class="chapter6" *ngIf="chapter.chapter6name !== ''">
         <div class="box6" id="select-box"><i class="fa fa-check"></i></div>
         <div class="name" (click)="openChapter(chapter.chapter6id)"> 6) {{chapter.chapter6name}}</div>
-        <div style="color: gray; font-weight: 600; font-size: small; margin-left: 12%;">subcontents (1/1)</div>
+
       </div>
       <hr *ngIf="chapter.chapter6name !== ''">
 
       <div style="cursor: pointer;" (click)="set7()" class="chapter7" *ngIf="chapter.chapter7name !== ''">
         <div class="box7" id="select-box"><i class="fa fa-check"></i></div>
         <div class="name" (click)="openChapter(chapter.chapter7id)"> 7) {{chapter.chapter7name}}</div>
-        <div style="color: gray; font-weight: 600; font-size: small; margin-left: 12%;">subcontents (1/1)</div>
+
       </div>
       <hr *ngIf="chapter.chapter7name !== ''">
 
       <div style="cursor: pointer;" (click)="set8()" class="chapter8" *ngIf="chapter.chapter8name !== ''">
         <div class="box8" id="select-box"><i class="fa fa-check"></i></div>
         <div class="name" (click)="openChapter(chapter.chapter8id)"> 8) {{chapter.chapter8name}}</div>
-        <div style="color: gray; font-weight: 600; font-size: small; margin-left: 12%;">subcontents (1/1)</div>
+
       </div>
       <hr *ngIf="chapter.chapter8name !== ''">
     </div>
@@ -157,10 +191,6 @@
             style="display: inline-block; border-radius: 10px; font-weight: bolder; font-size: large;"
             (click)="downloadPdf()">Download Resource</button>
         </div>
-        <strong id="downloadtxt"
-          style="font-size: large; font-weight: bolder; color: black; margin-bottom: 5%; cursor: pointer;">For more
-          course materials, contact the Instructor or ADMIN - (Gowthamraj K) gowthamraj692@gmail.com / whatsapp to
-          9698382306</strong>
       </div>
     </div>
     <div id="notes" style="padding-bottom: 5%;" class="descriptions">

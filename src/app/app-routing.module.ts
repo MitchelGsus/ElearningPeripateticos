@@ -19,7 +19,6 @@ import { AddprofessorComponent } from './components/addprofessor/addprofessor.co
 import { AdminGuard } from './guards/admin.guard';
 import { MywishlistComponent } from './components/mywishlist/mywishlist.component';
 import { FullcourseComponent } from './components/fullcourse/fullcourse.component';
-import { AddchallengeComponent } from './components/addchallenge/addchallenge.component';
 
 
 
@@ -41,7 +40,6 @@ const routes: Routes = [
   { path: 'addProfessor', component: AddprofessorComponent, canActivate: [AdminGuard] },
   { path: 'mywishlist', component: MywishlistComponent, canActivate: [RouterGuard] },
   { path: 'fullcourse/:coursename', component: FullcourseComponent, canActivate: [RouterGuard] },
-  { path: 'addchallenge', component: AddchallengeComponent, canActivate: [RouterGuard] },
 ];
 
 @NgModule({
