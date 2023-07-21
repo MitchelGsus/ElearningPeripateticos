@@ -21,6 +21,7 @@ import { FullcourseComponent } from './components/fullcourse/fullcourse.componen
 import { UserdashboardComponent } from './components/userdashboard/userdashboard.component';
 import { UserGuard } from './guards/user.guard';
 import { UserlistComponent } from './components/userlist/userlist.component';
+import { UserprofileComponent } from './components/userprofile/userprofile.component';
 
 
 
@@ -31,7 +32,7 @@ const routes: Routes = [
   { path: 'registrationsuccess', component: RegistrationsuccessComponent },
   { path: 'login', component: LoginComponent },
   { path: 'professordashboard', component: DashboardteacherComponent },
-  { path:'userdashboard',component:UserdashboardComponent,canActivate:[UserGuard]},
+  { path: 'userdashboard', component: UserdashboardComponent, canActivate: [UserGuard] },
   { path: 'addCourse', component: AddcourseComponent },
   { path: 'admindashboard', component: AdminDashboardComponent },
   { path: 'approveprofessor', component: ApprovalstatusComponent, canActivate: [RouterGuard] },
@@ -43,6 +44,7 @@ const routes: Routes = [
   { path: 'addProfessor', component: AddprofessorComponent, canActivate: [AdminGuard] },
   { path: 'mywishlist', component: MywishlistComponent, canActivate: [RouterGuard] },
   { path: 'fullcourse/:coursename', component: FullcourseComponent, canActivate: [RouterGuard] },
+  { path: 'edituserprofile', component: UserprofileComponent, canActivate: [RouterGuard] }
 ];
 
 @NgModule({
