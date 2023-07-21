@@ -48,31 +48,7 @@ export class FullcourseComponent implements OnInit {
   }
 
   // Agrega una variable para almacenar el texto objetivo de la respuesta
-  respuestaCorrecta1: string =
-    `
-    import java.sql.Connection;
-    import java.sql.DriverManager;
-    import java.sql.SQLException;
-    
-    public class ConexionBD {
-        public static void main(String[] args) {
-            // Datos de conexión a la base de datos
-            String url = "jdbc:mysql://localhost:3306/nombre_basedatos";
-            String usuario = "root";
-            String contraseña = "";
-    
-            // Establecer conexión
-            try {
-                Connection conexion = DriverManager.getConnection(url, usuario, contraseña);
-                System.out.println("Conexión exitosa a la base de datos MySQL");
-                
-                System.out.println("Conexión cerrada correctamente");
-            } catch (SQLException e) {
-                System.out.println("Error al establecer conexión: " + e.getMessage());
-            }
-        }
-    }
-`;
+  respuestaCorrecta1: string = this.chapter.challenge1responsecorrect;
   respuestaCorrecta2: string =
     `
     import org.springframework.boot.SpringApplication;
@@ -115,7 +91,7 @@ public class MyApp {
     // Obtener el contenido del textarea
     const userResponse1 = (<HTMLTextAreaElement>document.getElementById('userResponse1')).value;
     const userResponse2 = (<HTMLTextAreaElement>document.getElementById('userResponse2')).value;
-
+    console.log(this.chapter.challenge1responsecorrect)
     // Comprobar si la respuesta del usuario es igual a la respuesta objetivo
     if (userResponse1.trim() === this.respuestaCorrecta1.trim() || userResponse2.trim() === this.respuestaCorrecta2.trim()) {
       // Respuesta correcta

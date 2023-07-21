@@ -6,6 +6,7 @@ export class Chapter {
     challenge1id: string = '';
     challenge1description: string = '';
     challenge1code: string = '';
+    challenge1responsecorrect: string = '';
     challenge1origin: string = '';
     challenge1response: string = '';
     chapter2name: string = '';
@@ -14,6 +15,7 @@ export class Chapter {
     challenge2id: string = '';
     challenge2description: string = '';
     challenge2code: string = '';
+    challenge2responsecorrect: string = '';
     challenge2origin: string = '';
     challenge2response: string = '';
     chapter3name: string = '';
@@ -22,6 +24,7 @@ export class Chapter {
     challenge3id: string = '';
     challenge3description: string = '';
     challenge3code: string = '';
+    challenge3responsecorrect: string = '';
     challenge3origin: string = '';
     challenge3response: string = '';
     chapter4name: string = '';
