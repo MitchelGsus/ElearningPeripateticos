@@ -28,6 +28,7 @@ import { FullcourseComponent } from './components/fullcourse/fullcourse.componen
 import { UserdashboardComponent } from './components/userdashboard/userdashboard.component';
 import { UserlistComponent } from './components/userlist/userlist.component';
 import { UserprofileComponent } from './components/userprofile/userprofile.component';
+import { MycoursesComponent } from './components/mycourses/mycourses.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +51,8 @@ import { UserprofileComponent } from './components/userprofile/userprofile.compo
     FullcourseComponent,
     UserdashboardComponent,
     UserlistComponent,
-    UserprofileComponent
+    UserprofileComponent,
+    MycoursesComponent
   ],
   imports: [
     BrowserModule,
