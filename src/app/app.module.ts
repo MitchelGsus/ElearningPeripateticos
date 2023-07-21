@@ -7,7 +7,6 @@ import { HomeComponent } from './components/home/home.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardteacherComponent } from './components/dashboardteacher/dashboardteacher.component';
-import { UserComponent } from './components/user/user.component';
 import { AddcourseComponent } from './components/addcourse/addcourse.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -27,6 +26,8 @@ import { AddprofessorComponent } from './components/addprofessor/addprofessor.co
 import { MywishlistComponent } from './components/mywishlist/mywishlist.component';
 import { FullcourseComponent } from './components/fullcourse/fullcourse.component';
 import { UserdashboardComponent } from './components/userdashboard/userdashboard.component';
+import { UserlistComponent } from './components/userlist/userlist.component';
+import { UserprofileComponent } from './components/userprofile/userprofile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,6 @@ import { UserdashboardComponent } from './components/userdashboard/userdashboard
     RegistrationComponent,
     LoginComponent,
     DashboardteacherComponent,
-    UserComponent,
     AddcourseComponent,
     AdminDashboardComponent,
     HeaderComponent,
@@ -48,7 +48,9 @@ import { UserdashboardComponent } from './components/userdashboard/userdashboard
     AddprofessorComponent,
     MywishlistComponent,
     FullcourseComponent,
-    UserdashboardComponent
+    UserdashboardComponent,
+    UserlistComponent,
+    UserprofileComponent
   ],
   imports: [
     BrowserModule,
