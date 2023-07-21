@@ -10,9 +10,8 @@
       [width]="720"></youtube-player>
     <div class="chapter-list" *ngFor="let chapter of chapterlist | async">
       <div style="font-weight: bold; font-size: large; align-items: center; color: darkred;"><i class="fa fa-list"></i>
-        Course Contents</div>
-      <div style="color: gray; font-weight: 400; font-size: small; margin-bottom: 5%;">(click on chapter name to get
-        into the videos)</div>
+        Contenido del Curso:</div>
+      <div style="color: gray; font-weight: 400; font-size: small; margin-bottom: 5%;">(Click en los capitulos para ver los videos)</div>
       <div
         style="color: red; font-size: medium; font-weight: bolder; margin-top: 30%; margin-left: 5%; margin-right: 5%;"
         *ngIf="chapter.chapter1name === ''">Currently No Chapters available for this Course. Please wait, the Instructor
@@ -38,10 +37,10 @@
           <div class="origin">
             {{chapter.challenge1origin}}
           </div>
-          <textarea id="userResponse1" cols="100" rows="30"></textarea>
+          <textarea id="userResponse1" [(ngModel)]="userResponse1" name="userResponse1" cols="100" rows="30"></textarea>
           <button class="btn btn-warning btn-sm"
             style="display: inline-block; margin-right: 5%; border-radius: 10px; font-weight: bolder; font-size: large;"
-            (click)="checkResponse()">Responder</button>
+            (click)="checkResponse(userResponse1,respuestacorrecta1)">Responder</button>
         </div>
         <hr *ngIf="chapter.chapter1name !== ''">
         <div style="cursor: pointer;" (click)="set2()" class="chapter2" *ngIf="chapter.chapter2name !== ''">
@@ -64,10 +63,10 @@
             <div class="origin">
               {{chapter.challenge2origin}}
             </div>
-            <textarea id="userResponse2" cols="100" rows="30"></textarea>
+            <textarea id="userResponse2" [(ngModel)]="userResponse2" name="userResponse2" cols="100" rows="30"></textarea>
             <button class="btn btn-warning btn-sm"
               style="display: inline-block; margin-right: 5%; border-radius: 10px; font-weight: bolder; font-size: large;"
-              (click)="checkResponse()">Responder</button>
+              (click)="checkResponse(userResponse2,respuestacorrecta2)">Responder</button>
           </div>
         </div>
         <hr *ngIf="chapter.chapter2name !== ''">
@@ -117,15 +116,11 @@
     </div>
     <div class="sub-container">
       <div class="sub-btns">
-        <button id="overview-btn" (click)="openOverview()" class="btn btn-info">Overview</button>
-        <button id="qa-btn" (click)="openQandA()" class="btn btn-info">Q&A</button>
-        <button id="downloads-btn" (click)="openDownloads()" class="btn btn-info">Downloads</button>
-        <button id="notes-btn" (click)="openNotes()" class="btn btn-info">Notes</button>
-        <button id="announcements-btn" (click)="openAnnouncements()" class="btn btn-info">Announcements</button>
+        <button id="overview-btn" (click)="openOverview()" class="btn btn-info">Vista Previa</button>
         <hr>
       </div>
       <div id="overview" class="descriptions" *ngFor="let course of courselist | async">
-        <strong style="font-weight: bolder; font-size: 25px;">About this Course</strong>
+        <strong style="font-weight: bolder; font-size: 25px;">Sobre este Curso</strong>
         <h3 class="card-title text-left" style="margin-top: 1.5%; font-weight: normal; font-size: 21px;">
           {{course.coursename}}</h3>
         <h6 class="text-center"
@@ -137,34 +132,19 @@
         </p>
         <hr style="margin-top: 2%; margin-bottom: 2%;">
 
-        <div><b style="color: darkred; font-size: large; margin-bottom: 1%;">Level : </b><b
+        <div><b style="color: darkred; font-size: large; margin-bottom: 1%;">Nivel : </b><b
             style="margin-left: 12%">{{course.skilllevel}}</b></div>
-        <div><b style="color: darkred; font-size: large; margin-bottom: 1%;">Language : </b><b
+        <div><b style="color: darkred; font-size: large; margin-bottom: 1%;">Lenguaje : </b><b
             style="margin-left: 7%">{{course.language}}</b></div>
-        <div><b style="color: darkred; font-size: large; margin-bottom: 1%;">Course Type : </b><b
+        <div><b style="color: darkred; font-size: large; margin-bottom: 1%;">Tipo de Curso : </b><b
             style="margin-left: 4.2%">{{course.coursetype}} contents</b></div>
         <div><b style="color: darkred; font-size: large; margin-bottom: 1%;">Instructor : </b><b
             style="margin-left: 7%">{{course.instructorname}} - {{course.instructorinstitution}}</b></div>
-        <div><b style="color: darkred; font-size: large; margin-bottom: 1%;">Enrolled Date : </b><b
+        <div><b style="color: darkred; font-size: large; margin-bottom: 1%;">Dia de inscripcion : </b><b
             style="margin-left: 3%">{{course.enrolleddate}}</b></div>
-        <div><b style="color: darkred; font-size: large; margin-bottom: 1%;">Learners : </b><b
-            style="margin-left: 8.5%">{{course.enrolledcount}} learners enrolled previously</b></div>
-        <hr style="margin-top: 2%; margin-bottom: 2%;">
-
-        <div>
-          <strong style="font-size: large;">Features </strong>
-          <label style="font-weight: large; margin-left: 10%;">Available on <span
-              style="color: blueviolet; font-weight: bold;">Android</span> and <span
-              style="color: blueviolet; font-weight: bold;">iOS</span></label>
-        </div>
-        <hr style="margin-top: 2%; margin-bottom: 2%;">
-
-        <div>
-          <strong style="font-size: large;">Certificate </strong>
-          <label style="font-weight: large; margin-left: 10%;">Get the certificate by completing entire course</label>
-          <br>
-          <div class="certificate">Certificate</div>
-        </div>
+        <div><b style="color: darkred; font-size: large; margin-bottom: 1%;">Alumnos : </b><b
+            style="margin-left: 8.5%">{{course.enrolledcount}} alumnos inscritos previamente</b></div>
+       
         <hr style="margin-top: 2%; margin-bottom: 2%;">
       </div>
       <div id="qa" style="padding-bottom: 5%;" class="descriptions">
@@ -173,10 +153,9 @@
           <i class="fa fa-search"></i>
         </div>
         <input class="form-control" id="searchtxt" type="text" name="searchQA"
-          placeholder="search all course questions..." />
+          placeholder="buscar todas las preguntas del curso..." />
         <strong id="newQA" (click)="newQuestion()"
-          style="font-size: large; font-weight: bolder; color: black; margin-bottom: 4%; cursor: pointer;">Ask a New
-          Question ?</strong>
+          style="font-size: large; font-weight: bolder; color: black; margin-bottom: 4%; cursor: pointer;">Hacer una nueva pregunta</strong>
         <textarea type="text" id="questions" rows="4" class="form-control"
           placeholder="ask your questions here..."></textarea>
       </div>
@@ -185,18 +164,7 @@
           style="color: darkred; font-size: larger; display: none; font-weight: bolder; margin-top: 5%; margin-bottom: 5%; margin-right: 10%;"
           *ngIf="chapter.chapter1name === ''">Currently No Resources available for download. Please wait, the Instructor
           will be adding the Resources while adding the chapters soon here</div>
-        <div *ngIf="chapter.chapter1name !== ''">
-          <strong id="downloadtxt"
-            style="font-size: large; font-weight: bolder; color: black; margin-bottom: 4%; cursor: pointer;">View and
-            download your course related materials here ...</strong>
-          <div style="display: inline-block; width: 100%; margin-top: 5%; margin-bottom: 5%;">
-            <button type="button" class="btn btn-warning btn-sm"
-              style="display: inline-block; margin-right: 5%; border-radius: 10px; font-weight: bolder; font-size: large;"
-              (click)="openDoc()">View Material</button>
-            <button type="button" class="btn btn-success btn-sm"
-              style="display: inline-block; border-radius: 10px; font-weight: bolder; font-size: large;"
-              (click)="downloadPdf()">Download Resource</button>
-          </div>
+       
         </div>
       </div>
       <div id="notes" style="padding-bottom: 5%;" class="descriptions">
