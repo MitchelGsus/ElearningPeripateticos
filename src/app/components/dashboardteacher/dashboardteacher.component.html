@@ -64,15 +64,15 @@
         <div class="text"
           style="font-family: 'aladin'; letter-spacing: 1px; font-size: 35px; font-weight: bolder; color: rgb(5, 44, 42);">
           Cursos</div>
-        <div class="sub-text" *ngFor="let course of courses | async">{{course}} courses available</div>
+        <div class="sub-text" *ngFor="let course of courses | async">{{course}} curso disponible</div>
       </div>
       <div class="dashboard-card" style="background-color: white; box-shadow: 4px 4px 25px 5px gray;">
         <div class="circle"><i id="icons" style="margin-left: 15px;" class="fa fa-graduation-cap"></i></div>
         <div class="text"
           style="font-family: 'aladin'; letter-spacing: 1px; font-size: 35px; font-weight: bolder; color: rgb(5, 44, 42);">
           Inscripciones</div>
-        <div class="sub-text" *ngFor="let count of enrollmentcount | async">{{count}} enrollments have been <br>made by
-          <b *ngFor="let enrollment of enrollments | async">{{enrollment}}</b> Learners
+        <div class="sub-text" *ngFor="let count of enrollmentcount | async">{{count}} inscritos en el curso <br>
+          <b *ngFor="let enrollment of enrollments | async">{{enrollment}}</b> alumno
         </div>
       </div>
       <div class="dashboard-card" style="background-color: white; box-shadow: 4px 4px 25px 5px gray;">
@@ -80,7 +80,7 @@
         <div class="text"
           style="font-family: 'aladin'; letter-spacing: 1px; font-size: 35px; font-weight: bolder; color: rgb(5, 44, 42);">
           Capitulos</div>
-        <div class="sub-text" *ngFor="let chapter of chapters | async">{{chapter}} courses are with its <br>detailed
+        <div class="sub-text" *ngFor="let chapter of chapters | async">{{chapter}} cursos con capitulos <br>detailed
           chapters</div>
       </div>
       <div class="dashboard-card" style="background-color: white; box-shadow: 4px 4px 25px 5px gray;">
@@ -88,8 +88,7 @@
         <div class="text"
           style="font-family: 'aladin'; letter-spacing: 1px; font-size: 35px; font-weight: bolder; color: rgb(5, 44, 42);">
           Favoritos</div>
-        <div class="sub-text" *ngFor="let wishlists of wishlist | async">{{wishlists}} courses are loved by <br>most of
-          the Leaners </div>
+        <div class="sub-text" *ngFor="let wishlists of wishlist | async">{{wishlists}} en lista de favoritos by </div>
       </div>
     </div>
   </div>
